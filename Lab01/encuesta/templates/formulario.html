@@ -1,0 +1,28 @@
+<h2>{{titulo}}</h2>
+<form action="" method="POST">
+    Nombre:
+    <input type="text" name="nombre" maxlenght="50"><br>
+    Contraseña:
+    <input type="text" name="password" ><br>
+    Educación:
+    <select name="educacion" id="">
+        <option value="sin-estudios">Sin estudios</option>
+        <option value="educacion-obligatoria" selected="selected">Educacion Obligatoria</option>
+        <option value="formacion-profesional">Formacion Profesional</option>
+        <option value="universidad">Universidad</option>
+    </select><br>
+    Nacionalidad:
+    <input type="radio" name="nacionalidad"  value="hispana">Hispana</input>
+    <input type="radio" name="nacionalidad"  value="otra">Otra</input><br>
+    Idiomas:
+    <input type="checkbox" name="idiomas" value="español" checked="checked">Español</input>
+    <input type="checkbox" name="idiomas" value="inglés">Inglés</input>
+    <input type="checkbox" name="idiomas" value="francés">Francés</input>
+    <input type="checkbox" name="idiomas" value="aleman">Alemán</input><br>
+    Email:
+    <input type="text" name="email"><br>
+    Sitio Web:
+    <input type="text" name="sitioweb"><br>
+    // Botón de enviar
+    <input type="submit" name="submit" value="Enviar">
+</form>

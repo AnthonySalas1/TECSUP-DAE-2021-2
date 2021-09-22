@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>{{ titutlo }}</h2>
+<form action="{% url 'encuesta:enviar' %}" method="post">
+   
+    Nombre:
+    <input type="text" name="nombre" maxlength="50"><br>
+    Contraseña:
+    <input type="password" name="password"><br>
+    Educación:
+    <select name="educacion">
+        <option value="sin-estudios">sin-estudios</option>
+        <option value="educacion-obligatoria" selected="selected">Educacion-Obligatoria</option>
+        <option value="formación-profesional">formación-profesional</option>
+        <option value="universidad">universidad</option>
+    </select><br>
+    Nacionalidad:
+    <input type="radio" name="nacionalidad" value="hispana">Hispana</option>
+    <input type="radio" name="nacionalidad" value="otra">Otra</option><br>
+    Idiomas:
+    <input type="radio" name="idiomas" value="español" checked="checked">Español</input>
+    <input type="radio" name="idiomas" value="ingles" >ingles</input>
+    <input type="radio" name="idiomas" value="frances">frances</input>
+    <input type="radio" name="idiomas" value="aleman">aleman</input><br>
+    Email:
+    <input type="text" name="email"><br>
+    Sitio Web:
+    <input type="text" name="sitioweb"><br>
+    //Boton de enviar
+    <input type="submit" name="submit" value="enviar"><br>
+</form>
+
+</body>
+</html>
