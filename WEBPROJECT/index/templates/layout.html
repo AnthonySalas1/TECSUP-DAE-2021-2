@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PROYECTO</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/shop.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/extra.css' %}">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/slate.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/master.css' %}" rel="stylesheet">
+  <script src="{% static 'js/master.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.poptrox.min.js' %}"></script>
+  <script src="{% static 'js/browser.min.js' %}"></script>
+  <script src="{% static 'js/breakpoints.min.js' %}"></script>
+  <script src="{% static 'js/util.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><h1 style="color: aliceblue;">GRAMM</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+    
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home">TCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/homeduino">HomeDuino</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/infomatica">Infomatica</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <br></br>
+  <br></br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1 class="my-4">{{request.session.nombrePagina}}</h1>
+        <div class="list-group">
+          {% for key,value in request.session.category_list.items %}
+          <a href="{% url 'index:categoria' value.id %}" class="list-group-item">{{ value.nombre }}</a>
+          {% endfor %}
+        </div>
+        
+      </div>
+      <!-- /.col-lg-3 -->
+      <div class="col-lg-9">
+        {% block content %}
+        {% endblock%}
+        <!-- /.row -->
+      </div>
+      <!-- /.col-lg-9 -->
+  </div>
+  <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

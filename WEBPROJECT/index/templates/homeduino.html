@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br></br>
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mt-2">
+                <h1>HABITACIONES</h1>
+            </div>
+        </div>
+        <H2>HABITACIONES</H2>
+        <div class="cards" style="display: flex; width: 100%;">
+            {% load static %}
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="1" name="id">
+                    <button class = "hovi">DORMITORIO</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="2" name="id">
+                    <button class = "hovi2">SALA</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="3" name="id">
+                    <button class = "hovi3">COCINA</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="4" name="id">
+                    <button class = "hovi4">BAÑO</button> <br>
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="5" name="id">
+                    <button class="btn btn-dark mb-2 w-100">Apagar todo</button> <br>
+                </form>
+            </div>
+        </div>
+        <H2>COMPONENTES</H2>
+        <div class="cards" style="display: flex; width: 100%;">
+            {% load static %}
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="1" name="id">
+                    <button class = "hovi">Room 1</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="2" name="id">
+                    <button class = "hovi">Room 2</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="3" name="id">
+                    <button class = "hovi">Room 3</button> <br>
+                </form>
+            </div>
+            <div class="card"
+                style=" width: 100%; height: 250px;">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="4" name="id">
+                    <button class = "hovi">Room 4</button> <br>
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <form method="POST">{% csrf_token %}
+                    <input type="hidden" value="5" name="id">
+                    <button class="btn btn-dark mb-2 w-100">Apagar todo</button> <br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Custom Scripts -->
+
+    {% endblock %}
