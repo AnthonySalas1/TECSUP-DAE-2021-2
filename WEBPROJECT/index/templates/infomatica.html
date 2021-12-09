@@ -1,6 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
-	<div class="is-preload">
+{% load static %}
+<br></br>
+<div class="row">
+	<div class="col-lg-3">
+	  <h1 class="my-4">{{request.session.nombrePagina}}</h1>
+	  <div class="list-group">
+		{% for key,value in request.session.category_list.items %}
+		<a href="{% url 'index:categoria' value.id %}" class="list-group-item">{{ value.nombre }}</a>
+		{% endfor %}
+	  </div>     
+	</div>
+
+<div class="is-preload">
+		<script src="{% static 'js/util.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<div id="titulo">INFOMATICA</div>
@@ -19,9 +39,9 @@
 						<article class="thumb">
 						   
 
-							<a href="media/images/fulls/01.jpg" class="image">
+							<a href="media/images/infomatica/01.jpg" class="image">
 								
-							<img src="media/images/smalls/02.jpg" alt="" /></a>
+							<img src="media/images/infomatica/02.jpg" alt="" /></a>
 							<h2>ANDROID: cómo ubicar mi teléfono con tan solo aplaudir</h2>
 							<p>Los teléfonos móviles se han convertido en herramientas muy importantes y de uso diario para todas las personas, pero cuando uno no encuentra su móvil dentro de casa porque está en vibrador, se vuelve un dolor de cabeza.
 								En esta oportunidad le enseñaremos un truco muy sencillo que ayudará a encontrarlo realizando simples aplausos. Para esto hay que instalar una aplicación denominada Clap to find (Aplaude para encontrar).
@@ -36,7 +56,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/03.jpg" class="image"><img src="media/images/smalls/04.jpg" alt="" /></a>
+							<a href="media/images/infomatica/03.jpg" class="image"><img src="media/images/infomatica/04.jpg" alt="" /></a>
 							<h2>Por qué miles de celulares rotos de África son recolectados y enviados a Europa</h2>
 							<p>Eric Arthur no tiene mucho tiempo para el ocio: pasa la mayor parte de los fines de semana conduciendo por Ghana para recoger teléfonos móviles rotos.
 
@@ -47,7 +67,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/05.jpg" class="image"><img src="media/images/smalls/06.jpg" alt="" /></a>
+							<a href="media/images/infomatica/05.jpg" class="image"><img src="media/images/infomatica/06.jpg" alt="" /></a>
 							<h2>Facebook obligará a algunos usuarios a activar la autenticación en dos pasos</h2>
 							<p>Las redes pueden ser un gran aliado para todos aquellos que quieran que su mensaje cale; ya sean usuarios corrientes, políticos o periodistas. Sin embargo, esas mismas plataformas pueden terminar convirtiéndose en un problema importante si no se implementan medidas adecuadas para su protección. Facebook Protect, el programa de seguridad avanzada de la red social, ha anunciado que comenzará a obligar a los internautas que más riesgo tienen de ser objetivo de ciberataques a que implementen la autenticación de dos factores, una medida que extenderá a nivel global en los próximos meses.
 								«La autenticación de dos factores, en particular mediante el uso de aplicaciones de autenticación de terceros , mejora significativamente la seguridad de sus cuentas en línea.
@@ -56,7 +76,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/07.jpg" class="image"><img src="media/images/smalls/08.jpg" alt="" /></a>
+							<a href="media/images/infomatica/07.jpg" class="image"><img src="media/images/infomatica/08.jpg" alt="" /></a>
 							<h2>El 93% de los españoles tienen problemas con el WiFi: ¿cómo pueden mejorar su conexión?</h2>
 							<p>Internet es una herramienta casi indispensable en el día a día de cada persona. Ya sea para consultar las noticias, ver películas o series, estar en contacto con amigos y familiares o jugar a videojuegos. Por eso es normal que el usuario se agobie cuando se da cuenta de que su conexión no funciona correctamente. Algo que, de acuerdo con un reciente estudio de la firma tecnológica Devolo, es bastante habitual. En concreto, un 93,2% de los encuestados por la empresa sostiene que ha tenido problemas con el WiFi en algún momento y, además, la mayoría de ellos, el 61,3%, afirma que no sabe cuáles son las razones por las que esto sucede.
 								Sea como fuere, hay varios procedimientos que el usuario puede seguir para mejorar la calidad de su conexión doméstica.
@@ -92,7 +112,7 @@
 						</article>
      
 						<article class="thumb">
-							<a href="media/images/fulls/09.jpg" class="image"><img src="media/images/smalls/10.jpg" alt="" /></a>
+							<a href="media/images/infomatica/09.jpg" class="image"><img src="media/images/infomatica/10.jpg" alt="" /></a>
 							<h2>¿Por qué deberías regalar tecnología reacondicionada estas Navidades?</h2>
 							<p>
 								Los residuos electrónicos alcanzarán los 57,4 millones de toneladas métricas a finales de año, un peso mayor que el de la Gran Muralla china. La manera de consumir tecnología debe cambiar. La electrónica renovada de Back Market prolonga la vida de miles de dispositivos, para apostar por un consumo más responsable y respetuoso con el medio ambiente
@@ -102,7 +122,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/11.jpg" class="image"><img src="media/images/smalls/12.jpg" alt="" /></a>
+							<a href="media/images/infomatica/11.jpg" class="image"><img src="media/images/infomatica/12.jpg" alt="" /></a>
 							<h2>¿Qué hace un enchufe inteligente? Así es el más vendido en Amazon por menos de diez euros y 9.000 valoraciones</h2>
 							<p>
 								La última evolución con respecto a los temporizadores analógicos de toda la vida son los llamados enchufes inteligentes. Los primeros hacen funciones de temporizadores y, aunque efectivos, se encuentran limitados y acaban dando algunos problemas con el paso del tiempo. Sin embargo, los enchufes inteligentes como TP-Link TAPO P100 (el más vendido en Amazon) son más avanzados: solo necesitan de una red wifi para funcionar y los configuramos con el móvil por Bluetooth.
@@ -116,7 +136,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/13.jpg" class="image"><img src="media/images/smalls/14.jpg" alt="" /></a>
+							<a href="media/images/infomatica/13.jpg" class="image"><img src="media/images/infomatica/14.jpg" alt="" /></a>
 							<h2>Altavoces Echo Dot, cables HDMI o ratones inalámbricos: ocho productos de tecnología con hasta 150.000 valoraciones en Amazon</h2>
 							<p>Pasados los eventos Black Friday y Cyber Monday, nos adentramos en uno de los meses más especiales debido a la cantidad de fiestas familiares y de amistades que se llevan a cabo. En muchas de ellas, se intercambian regalos y unas de las categorías más esperadas cada año es la tecnología, los gadgets o dispositivos electrónicos para la casa con unas funciones muy específicas. Por ello, en EL PAÍS Escaparate nos hemos centrado en ocho productos superventas con una nota media y popularidad fuera de toda duda en Amazon: hasta 150.000 valoraciones.
 
@@ -127,7 +147,7 @@
 						</article>
 
 						<article class="thumb">
-							<a href="media/images/fulls/15.jpg" class="image"><img src="media/images/smalls/16.jpg" alt="" /></a>
+							<a href="media/images/infomatica/15.jpg" class="image"><img src="media/images/infomatica/16.jpg" alt="" /></a>
 							<h2>Los Chromebooks se pueden convertir en máquinas gaming con esta novedad de Steam</h2>
 							<p>No hará falta comprar un ordenador Windows para ejecutar juegos de Steam, gracias a la última novedad que ya está siendo experimentada en Chrome OS.
 
@@ -140,7 +160,7 @@
 							</p>
 						</article>
 						<article class="thumb">
-							<a href="media/images/fulls/17.jpg" class="image"><img src="media/images/smalls/18.jpg" alt="" /></a>
+							<a href="media/images/infomatica/17.jpg" class="image"><img src="media/images/infomatica/18.jpg" alt="" /></a>
 							<h2>Una tableta ideal para empezar a dibujar con tu ordenador: probamos la One by Wacom</h2>
 							<p>Si queremos dar rienda suelta a nuestra creatividad, una de las opciones más baratas viene de la mano de Wacom, con una tableta muy barata pero que ofrece una buena experiencia.
 								Las tabletas son una herramienta imprescindible para muchos creadores de contenido, desde aficionados a profesionales; sin embargo, también pueden llegar a ser muy caras. Si nos fijamos en el catálogo de la propia Wacom, encontramos modelos que superan los 3.500 euros.
@@ -156,7 +176,7 @@
 								Otro aspecto que también tendrá que 'estudiar' el principiante es la diferencia de grosor dependiendo de la fuerza que hagamos; en nuestras pruebas, la diferencia se ha detectado correctamente, resultando en un trazo más grueso o más fino. Es una de las principales herramientas que tendrás a tu mano, además de los dos botones incluidos en el propio lápiz para iniciar funciones de la app que estemos usando; aunque se echa en falta un botón más en la parte superior.</p>
 						</article>
 						<article class="thumb">
-							<a href="media/images/fulls/19.jpg" class="image"><img src="media/images/smalls/20.jpg" alt="" /></a>
+							<a href="media/images/infomatica/19.jpg" class="image"><img src="media/images/infomatica/20.jpg" alt="" /></a>
 							<h2>Apple quiere un futuro en el que todos tus dispositivos se puedan cargar entre sí</h2>
 							<p>Apple está desarrollando un nuevo cargador inalámbrico, capaz de cargar la batería de varios dispositivos al mismo tiempo que, a su vez, serían capaces de recargarse mutuamente.
 								La compañía de la manzana tiene como objetivo deshacerse de los cables completamente, con dispositivos con un diseño más limpio y compacto; para ello, tiene que mejorar su estándar de carga inalámbrica, MagSafe, que presentó con el iPhone 12.
@@ -166,7 +186,7 @@
 								Apple no ha ocultado que quiere deshacerse completamente de los cables, para crear diseños más compactos y elegantes. También le puede ayudar a evitar la última decisión de la Comisión Europea, que ordenará a los fabricantes a usar USB-C como puerto de carga; de manera crucial, la carga inalámbrica se queda fuera de estas reglas, lo que permitirá a Apple seguir ofreciendo un producto diferente al resto del mercado.</p>
 						</article>
 						<article class="thumb">
-							<a href="media/images/fulls/21.jpg" class="image"><img src="media/images/smalls/22.jpg" alt="" /></a>
+							<a href="media/images/infomatica/21.jpg" class="image"><img src="media/images/infomatica/22.jpg" alt="" /></a>
 							<h2>Microsoft recupera las tácticas de Internet Explorer para obligarte a usar Edge</h2>
 							<p>Desde ventanas emergentes a complicadas configuraciones, los últimos cambios de Microsoft para fomentar el uso de Edge están recibiendo duras críticas de quienes temen que la compañía vuelva a ser como era.
 								Desde que Satya Nadella está al frente de Microsoft, el gigante no es el mismo; ya no es un vendedor de software, obsesionado por vendernos Windows, sino un proveedor de servicios. Una estrategia que está dando frutos, después de adelantar a Apple como la cotizada más valiosa del mundo.
@@ -175,7 +195,7 @@
 								Pero incluso si te molestas en hacer todos esos cambios, Windows 11 ignora tus preferencias y sigue abriendo ciertos enlaces en Edge; en concreto, los que aparecen en los nuevos Widgets, así como en la búsqueda integrada, siempre se abrirán en Edge sin importar cómo hayas configurado el sistema. Es tan molesto que un aficionado lanzó una app, EdgeDeflector, que cambia esto y hace que los enlaces se abran siempre con nuestro navegador preferido; pero Microsoft bloqueó esa app con una actualización, con la excusa de que esos enlaces son una "experiencia" que la compañía ofrece a los usuarios, y no simples enlaces a webs (aunque lo sean). </p>
 						</article>
 						<article class="thumb">
-							<a href="media/images/fulls/23.jpg" class="image"><img src="media/images/smalls/24.jpg" alt="" /></a>
+							<a href="media/images/infomatica/23.jpg" class="image"><img src="media/images/infomatica/24.jpg" alt="" /></a>
 							<h2>Las gafas de realidad aumentada de Apple llegarían en el 2022, tan potentes como un Mac</h2>
 							<p>Apple finalmente lanzaría sus gafas de realidad aumentada a finales del 2022, con hardware tan potente como un Mac para ofrecer una gran cantidad de funcionalidades.
 								Que la compañía de la manzana estaba trabajando en realidad aumentada no era ningún secreto, pero parece que el proyecto ya se encuentra en la fase final de desarrollo, según el analista Min-chi Kuo.
@@ -232,7 +252,14 @@
 							</div>
 						</div>
 					</footer>
-
+					<script src="{% static 'js/util.js' %}"></script>
+					<script src="{% static 'js/main.js' %}"></script>
+					<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+					<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+					<script src="{% static 'assets/js/browser.min.js' %}"></script>
+					<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+					<script src="{% static 'assets/js/util.js' %}"></script>
+					<script src="{% static 'assets/js/main.js' %}"></script>
 			</div>
 		<!-- Scripts -->		
 		</div>
