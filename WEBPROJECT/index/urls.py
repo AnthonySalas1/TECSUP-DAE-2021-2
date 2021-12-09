@@ -20,6 +20,7 @@ urlpatterns = [
     ,
 
     ##Tienda de Componenetes
+    path('TCE', views.TCE, name = 'TCE'),
     path('producto', views.producto, name='producto')
     ,
     path('categoria/<int:categoria_id>',views.indexByCategory,name='categoria'),

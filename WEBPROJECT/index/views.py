@@ -11,6 +11,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
+def home (request):
+    return render (request, 'home.html')
+
 def info (request):
     return render (request, 'infomatica.html')
 
@@ -30,7 +33,7 @@ def index_view (request):
         print(id)
     return render(request, 'homeduino.html')
 
-def home(request):
+def TCE(request):
     product_list = Producto.objects.order_by('nombre')[:6]
     category_list = Categoria.objects.all()
     
@@ -46,14 +49,14 @@ def home(request):
     context = { 
         'product_list': product_list,
     }
-    return render(request, 'home.html', context)
+    return render(request, 'TCE.html', context)
     
 def producto(request,producto_id):
     OBJproducto = Producto.objects.get(pk=producto_id)
     
     context = { 
         'producto': OBJproducto }
-    return render(request, 'home.html', context)
+    return render(request, 'TCE.html', context)
 
 def indexByCategory(request,categoria_id):
     objCategoria = Categoria.objects.get(pk=categoria_id)
@@ -62,7 +65,7 @@ def indexByCategory(request,categoria_id):
     context = { 
         'product_list': product_list
     }
-    return render(request, 'home.html', context)
+    return render(request, 'TCE.html', context)
 
 
 class JSONResponse(HttpResponse):

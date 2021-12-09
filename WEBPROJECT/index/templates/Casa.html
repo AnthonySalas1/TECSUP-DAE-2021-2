@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-{% block content %}
-
-<div>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +26,7 @@
     <meta property="og:title" content="Casa">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="Casa.html" data-home-page-title="Casa" class="u-body">
+  <body class="u-body">
     <section class="u-clearfix u-grey-5 u-section-1" id="carousel_5aca">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-palette-3-base u-text-1">GREYMAC</h2>
@@ -41,8 +37,7 @@
                 <div class="u-layout-col">
                   <div class="u-align-center u-container-style u-layout-cell u-size-40 u-white u-layout-cell-1">
                     <div class="u-container-layout u-container-layout-1">
-                      {% load static %}
-                      <img class="u-expanded-width u-image u-image-1" src="css/images/comp.jpg" data-image-width="770" data-image-height="420">
+                      <img class="u-expanded-width u-image u-image-1" src="/media/images/20.jpg" data-image-width="770" data-image-height="420">
                       <h4 class="u-text u-text-default u-text-2">TCE</h4>
                       <p class="u-text u-text-3">Aqui encontrarás diferentes componentes tecnologicos, esta es una tienda busca lo que necesites.</p>
                     </div>
@@ -59,8 +54,7 @@
                   </div>
                   <div class="u-align-center u-container-style u-layout-cell u-size-40 u-white u-layout-cell-4">
                     <div class="u-container-layout u-container-layout-4">
-                      {% load static %}
-                      <img class="u-expanded-width u-image u-image-2" src="css/images/duino.jpg" data-image-width="1960" data-image-height="1103">
+                      <img class="u-expanded-width u-image u-image-2" src="media/images/13.jpg" data-image-width="1960" data-image-height="1103">
                       <h4 class="u-text u-text-4">HOMEDUINO</h4>
                       <p class="u-text u-text-5">Dentro de esta parte de nuestra página encontrarás la manera de como controlar las luces de tu casa mediante arduino y una conexión web<br>Quedate a ver que ocurre!
                       </p>
@@ -72,8 +66,7 @@
                 <div class="u-layout-col">
                   <div class="u-align-center u-container-style u-layout-cell u-size-40 u-white u-layout-cell-5">
                     <div class="u-container-layout u-container-layout-5">
-                      {% load static %}
-                      <img class="u-expanded-width u-image u-image-3" src="css/images/infojpg" data-image-width="450" data-image-height="253">
+                      <img class="u-expanded-width u-image u-image-3" src="media/images/01.jpg" data-image-width="450" data-image-height="253">
                       <h4 class="u-text u-text-default u-text-6">INFOMATICA</h4>
                       <p class="u-text u-text-7">Dentro de esta parte de nuestro proyecto encontrarás lo que es noticias de último tiempo sobre tecnología, no te quedes con la duda entra!!</p>
                     </div>
@@ -86,6 +79,7 @@
             </div>
           </div>
         </div>
+        <p class="u-align-center u-text u-text-8">Images from <a href="https://freepik.com/photos/people" class="u-active-none u-border-1 u-border-black u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1">Freepik</a>
         </p>
       </div>
     </section>
@@ -120,8 +114,6 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Encuentranos como:&nbsp;<br>GREYMAC@gmail.com
         </p>
       </div></footer>
-   
+    
   </body>
 </html>
-</div>
-{% endblock %}
